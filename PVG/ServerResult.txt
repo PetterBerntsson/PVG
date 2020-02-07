@@ -1,0 +1,22 @@
+<table style="width:50%">
+<tr>
+<th>nummer</th> 
+<th>namn</th> 
+<th>tid</th>
+</tr>
+<tr>
+<td>1</td>
+<td>adam</td>
+<td>12.05.04</td>
+</tr>
+<tr>
+<td>2</td>
+<td>bertil</td>
+<td>12.03.55</td>
+</tr>
+<tr>
+<td>3</td>
+<td>carl</td>
+<td>12.12.12</td>
+</tr>
+</table>
