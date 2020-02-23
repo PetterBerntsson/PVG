@@ -2,3 +2,4 @@ nummer;namn;tid
 1;adam;12.05.04
 2;bertil;12.03.55
 3;carl;12.12.12
+4;peder;14.15.110

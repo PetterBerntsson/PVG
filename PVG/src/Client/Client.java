@@ -35,6 +35,7 @@ public class Client {
             }
 
             out.writeUTF(line); // Här skrivs datan till Server-Socket
+            out.writeUTF("Over");
 
         } catch(FileNotFoundException e) {
             System.out.println(e);
@@ -44,13 +45,7 @@ public class Client {
 
 
         //Vi kan använda stop-kommandon på det viset sen
-        /*while(!line.equals("Over")) {
-            try {
-                out.writeUTF(line);
-            } catch(IOException e) {
-                System.out.println(e);
-            }
-        }*/ // Här kan man läsa multi-inputs
+        // Här kan man läsa multi-inputs
 
 
 

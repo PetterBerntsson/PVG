@@ -37,7 +37,6 @@ public class HTMLGenerator {
 
         String page = "<table style=\"width:50%\">\n" + header + "\n" + body.trim() + "\n" + "</table>";
 
-        System.out.println(page);
 
         return page;
     }

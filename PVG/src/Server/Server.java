@@ -3,6 +3,7 @@ import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLOutput;
 
 import com.sun.net.httpserver.HttpServer;
 
@@ -46,9 +47,14 @@ public class Server {
 
 
             // Här lägger vi "stop"-kommandon
-            while(!line.equals("Over")) {
+            while(true) {
                 try {
                     line = in.readUTF();
+                    if(line.equals("Over")) {
+                        socket.close();
+                        socket = server.accept();
+                        in = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+                    }
                     BufferedWriter writer = new BufferedWriter(new FileWriter("./ServerResult.txt", false));
 
                     // System.out.println(line); //Debug
@@ -57,6 +63,7 @@ public class Server {
                     writer.write(html);
                     writer.newLine();
                     writer.close();
+                    System.out.println("Reading");
 
                 } catch(IOException e) {
                     //System.out.println(e);
